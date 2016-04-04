@@ -11,8 +11,12 @@
   max-width: 800px;
 }
 
-#myCalculator h1 {
+h1, h2 {
     text-align: center;
+}
+
+#myCalculator h2 {
+    font-weight: 300;
 }
 
 #myCalculator main {
