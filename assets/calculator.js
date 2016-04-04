@@ -22,6 +22,18 @@
       $scope.halWattage = ($scope.currentLumens * $scope.halConversion).toFixed(1);
       $scope.cflWattage = ($scope.currentLumens * $scope.cflConversion).toFixed(1);
       $scope.ledWattage = ($scope.currentLumens * $scope.ledConversion).toFixed(1);
+
+      if ($scope.currentHours > 24) {
+        $scope.currentHours = 24;
+      }
+
+      var totalHours = $scope.totalDays * $scope.currentHours;
+      var cost = $scope.currentCost / 100;
+
+      $scope.incCost = ((($scope.incWattage * totalHours) / 1000) * cost).toFixed(2);
+      $scope.halCost = ((($scope.halWattage * totalHours) / 1000) * cost).toFixed(2);
+      $scope.cflCost = ((($scope.cflWattage * totalHours) / 1000) * cost).toFixed(2);
+      $scope.ledCost = ((($scope.ledWattage * totalHours) / 1000) * cost).toFixed(2);
     }
 
     $scope.calculate();
