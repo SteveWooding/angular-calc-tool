@@ -33,3 +33,23 @@
   display: block;
   clear: both;
 }
+
+#myCalculator main section.inc {
+  background-color: #ba2d2d;
+  background-image: url(images/bulb_inc.svg);
+}
+
+#myCalculator main section.hal {
+  background-color: #de6615;
+  background-image: url(images/bulb_hal.svg);
+}
+
+#myCalculator main section.cfl {
+  background-color: #efc20f;
+  background-image: url(images/bulb_cfl.svg);
+}
+
+#myCalculator main section.led {
+  background-color: #36b23c;
+  background-image: url(images/bulb_led.svg);
+}
