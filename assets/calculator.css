@@ -53,3 +53,28 @@
   background-color: #36b23c;
   background-image: url(images/bulb_led.svg);
 }
+
+#myCalculator main section > div {
+  padding: 5px 0;
+  background-color: rgba(0,0,0,.15);
+}
+
+#myCalculator main h4 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: .8em;
+  letter-spacing: 1px;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+}
+
+#myCalculator main p {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+/* Target the price, which is a p tag imediately after another p tag */
+#myCalculator main p + p {
+  font-size: 1em;
+  font-weight: 300;
+}
