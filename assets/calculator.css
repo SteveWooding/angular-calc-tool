@@ -11,6 +11,10 @@
   max-width: 800px;
 }
 
+#myCalculator h1 {
+    text-align: center;
+}
+
 #myCalculator main {
   background-color: #444;
 }
