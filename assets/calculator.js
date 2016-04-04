@@ -19,6 +19,9 @@
 
     $scope.calculate = function() {
       $scope.incWattage = ($scope.currentLumens * $scope.incConversion).toFixed(1);
+      $scope.halWattage = ($scope.currentLumens * $scope.halConversion).toFixed(1);
+      $scope.cflWattage = ($scope.currentLumens * $scope.cflConversion).toFixed(1);
+      $scope.ledWattage = ($scope.currentLumens * $scope.ledConversion).toFixed(1);
     }
 
     $scope.calculate();
