@@ -61,7 +61,7 @@
 
 #myCalculator main h4 {
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: .8em;
+  font-size: 0.8em;
   letter-spacing: 1px;
   margin: 0 0 5px 0;
   text-transform: uppercase;
@@ -136,7 +136,7 @@
 #myCalculator form p {
   color: #888;
   margin: 0 0 6px 0;
-  font-size: .9em
+  font-size: 0.9em
 }
 
 #myCalculator form input[type=number] {
@@ -182,7 +182,7 @@
 
   #myCalculator main h4 {
     margin: 0;
-    font-size: .75em;
+    font-size: 0.75em;
     letter-spacing: 0;
   }
 
@@ -211,7 +211,7 @@
   }
 
   #myCalculator form p {
-      font-size: .8em;
+      font-size: 0.8em;
       line-height: 14px;
   }
 
@@ -221,11 +221,11 @@
 
   #myCalculator form input[type=number] {
       width: 30px;
-      font-size: .8em;
+      font-size: 0.8em;
   }
 
   #myCalculator form select {
-      font-size: .8em;
+      font-size: 0.8em;
   }
 
 }
