@@ -17,6 +17,12 @@
     $scope.cflConversion = 0.0146;
     $scope.ledConversion = 0.0125;
 
+    $scope.calculate = function() {
+      $scope.incWattage = ($scope.currentLumens * $scope.incConversion).toFixed(1);
+    }
+
+    $scope.calculate();
+
   }]);
 
 })();

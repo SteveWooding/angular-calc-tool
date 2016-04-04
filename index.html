@@ -18,7 +18,7 @@
       <section class="inc">
         <div>
           <h4>Incandescent</h4>
-          <p>100.0</p>
+          <p>{{incWattage}}</p>
           <p>13.14</p>
         </div>
       </section>
@@ -49,7 +49,8 @@
       <div>
         <h4>Lumens</h4>
         <p>Brightness <br>of bulb</p>
-        <select ng-model="currentLumens" ng-options="o for o in lumenOptions">
+        <select ng-change="calculate()" ng-model="currentLumens"
+                ng-options="o for o in lumenOptions">
         </select>
       </div>
       <div>
