@@ -73,7 +73,7 @@
   font-weight: 700;
 }
 
-/* Target the price, which is a p tag imediately after another p tag */
+/* Target the price, which is a p tag immediately after another p tag */
 #myCalculator main p + p {
   font-size: 1em;
   font-weight: 300;
@@ -148,7 +148,7 @@
 #myCalculator form select {
   font-size: 1em;
 
-  /* The following appearance lines suspresses the browser default
+  /* The following appearance lines suppresses the browser default
      appearance. */
   -webkit-appearance: none;
   -moz-appearance: none;
