@@ -78,3 +78,21 @@
   font-size: 1em;
   font-weight: 300;
 }
+
+/* Display unit of power after number. */
+#myCalculator main p::after {
+  content: 'W';
+  padding-left: 4px;
+}
+
+/* Display currency unit. */
+#myCalculator main p + p::before {
+  content: '£';
+}
+
+/* Display unit of time */
+#myCalculator main p + p::after {
+  content: 'per year';
+  color: rgba(255,255,255,.5);
+  padding-left: 4px;
+}
