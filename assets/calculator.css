@@ -27,10 +27,10 @@ h1, h2 {
   width: 25%;
   float: left;
   text-align: center;
-  padding-top: 110px;
+  padding-top: 120px;
   color: #fff;
   background-repeat: no-repeat;
-  background-position: center 5px;
+  background-position: center 10px;
   background-size: 63px 100px;
 }
 
@@ -186,6 +186,7 @@ h1, h2 {
   #myCalculator main section {
     background-size: 45px 71px;
     padding-top: 80px;
+    background-position: center 5px;
   }
 
   #myCalculator main h4 {
