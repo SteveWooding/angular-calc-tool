@@ -125,3 +125,44 @@
   display: block;
   clear: both;
 }
+
+#myCalculator form h4 {
+  color: #aaa;
+  margin: 0 0 -5px 0;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+#myCalculator form p {
+  color: #888;
+  margin: 0 0 6px 0;
+  font-size: .9em
+}
+
+#myCalculator form input[type=number] {
+  width: 50px;
+  text-align: left;
+  font-size: 1em;
+}
+
+#myCalculator form select {
+  font-size: 1em;
+
+  /* The following appearance lines suspresses the browser default
+     appearance. */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+  background: #fff url(images/icons_arrows.svg) no-repeat right 6px;
+  background-size: 30px 20px;
+  padding: 3px 30px 3px 5px;
+}
+
+/* Need another selector to stop IE from displaying its default for the select
+   tag. */
+#myCalculator form select::-ms-expand {
+  display: none;
+}
