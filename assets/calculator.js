@@ -12,6 +12,11 @@
     $scope.currentHours = 3;
     $scope.totalDays = 365;
 
+    $scope.incConversion = 0.0625;
+    $scope.halConversion = 0.0450;
+    $scope.cflConversion = 0.0146;
+    $scope.ledConversion = 0.0125;
+
   }]);
 
 })();
