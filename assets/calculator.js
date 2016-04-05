@@ -11,23 +11,23 @@
     $scope.currentLumens = 600;
     $scope.currentCost = 12;
     $scope.currentHours = 3;
-    $scope.totalDays = 365;
+    var totalDays = 365;
 
     // Define the approximate conversion parameter for each bulb type.
-    $scope.incConversion = 0.0625;
-    $scope.halConversion = 0.0450;
-    $scope.cflConversion = 0.0146;
-    $scope.ledConversion = 0.0125;
+    var incConversion = 0.0625;
+    var halConversion = 0.0450;
+    var cflConversion = 0.0146;
+    var ledConversion = 0.0125;
 
     /**
      * Calculate the wattage and cost of each bulb type.
      */
     $scope.calculate = function() {
       // Calculate the wattage of each bulb type.
-      $scope.incWattage = ($scope.currentLumens * $scope.incConversion).toFixed(1);
-      $scope.halWattage = ($scope.currentLumens * $scope.halConversion).toFixed(1);
-      $scope.cflWattage = ($scope.currentLumens * $scope.cflConversion).toFixed(1);
-      $scope.ledWattage = ($scope.currentLumens * $scope.ledConversion).toFixed(1);
+      $scope.incWattage = ($scope.currentLumens * incConversion).toFixed(1);
+      $scope.halWattage = ($scope.currentLumens * halConversion).toFixed(1);
+      $scope.cflWattage = ($scope.currentLumens * cflConversion).toFixed(1);
+      $scope.ledWattage = ($scope.currentLumens * ledConversion).toFixed(1);
 
       // Put a limit of 24 hours in a day.
       if ($scope.currentHours > 24) {
@@ -35,7 +35,7 @@
       }
 
       // Calculate the total number of hours of bulb use per year.
-      var totalHours = $scope.totalDays * $scope.currentHours;
+      var totalHours = totalDays * $scope.currentHours;
 
       // Convert pence per kWh into pounds
       var cost = $scope.currentCost / 100;
