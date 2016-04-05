@@ -14,10 +14,10 @@
     var totalDays = 365;
 
     // Define the approximate conversion parameter for each bulb type.
-    var incConversion = 0.0625;
-    var halConversion = 0.0450;
-    var cflConversion = 0.0146;
-    var ledConversion = 0.0125;
+    var incConversion = 0.0951;
+    var halConversion = 0.0710;
+    var cflConversion = 0.0181;
+    var ledConversion = 0.0100;
 
     /**
      * Calculate the wattage and cost of each bulb type.
