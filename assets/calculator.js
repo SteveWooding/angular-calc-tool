@@ -7,14 +7,14 @@
   app.controller('CalculatorController', ['$scope', function($scope) {
 
     // Set default values and options
-    $scope.lumenOptions = [375, 600, 900, 1125, 1600];
-    $scope.currentLumens = 600;
+    $scope.lumenOptions = [210, 420, 630, 1050, 1600];
+    $scope.currentLumens = 630;
     $scope.currentCost = 12;
     $scope.currentHours = 3;
     var totalDays = 365;
 
     // Define the approximate conversion parameter for each bulb type.
-    var incConversion = 0.0951;
+    var incConversion = 0.0952;
     var halConversion = 0.0710;
     var cflConversion = 0.0181;
     var ledConversion = 0.0100;
