@@ -105,6 +105,26 @@ h1, h2 {
   padding-left: 4px;
 }
 
+/* Display lifetime title */
+#myCalculator main p + p + p::before {
+  content: 'Lifetime: ';
+}
+
+/* Display lifetime units */
+#myCalculator main p + p + p::after {
+  content: 'h';
+}
+
+/* Display 10 year cost title */
+#myCalculator main p + p + p + p::before {
+  content: '10 year cost: £';
+}
+
+/* Clear units on 10 year cost */
+#myCalculator main p + p + p + p::after {
+  content: '';
+}
+
 /* Styles for the form elements. */
 #myCalculator form {
   background-color: #000;
@@ -177,7 +197,7 @@ h1, h2 {
 
 
 /* Styling for small screens (e.g. phones) */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
 
   #myCalculator {
     font-size: 15px;
@@ -210,6 +230,15 @@ h1, h2 {
       color: #fff;
   }
 
+  #myCalculator main p + p + p::after {
+      display: inline;
+      color: #fff;
+  }
+
+    #myCalculator main p + p + p {
+      margin-left: 11px;
+      margin-right: 11px;
+    }
 
 /*
  * Styling of the form elements for small screens.
