@@ -67,7 +67,7 @@
         Math.ceil(totalHours * 10 / $scope.cflLife)).toFixed(2);
       $scope.led10yCost = (10 * $scope.ledCost + ledBulbCost *
         Math.ceil(totalHours * 10 / $scope.ledLife)).toFixed(2);
-    }
+    };
 
     // Run the calculation the first time the page is loaded.
     $scope.calculate();
