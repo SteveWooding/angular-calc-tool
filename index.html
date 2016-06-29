@@ -11,44 +11,44 @@
 </head>
 
 <body>
-  <div id="myCalculator" ng-controller="CalculatorController">
+  <div id="myCalculator" ng-controller="CalculatorController as CalcCtrl">
     <h1>BulbCompare.com</h1>
     <h2>Compare the cost of different types of bulb</h2>
     <main>
       <section class="inc">
         <div>
           <h4>Incandescent</h4>
-          <p>{{incWattage}}</p>
-          <p>{{incCost}}</p>
-          <p>{{incLife}}</p>
-          <p>{{inc10yCost}}</p>
+          <p>{{CalcCtrl.incWattage}}</p>
+          <p>{{CalcCtrl.incCost}}</p>
+          <p>{{CalcCtrl.incLife}}</p>
+          <p>{{CalcCtrl.inc10yCost}}</p>
         </div>
       </section>
       <section class="hal">
         <div>
           <h4>Halogen</h4>
-          <p>{{halWattage}}</p>
-          <p>{{halCost}}</p>
-          <p>{{halLife}}</p>
-          <p>{{hal10yCost}}</p>
+          <p>{{CalcCtrl.halWattage}}</p>
+          <p>{{CalcCtrl.halCost}}</p>
+          <p>{{CalcCtrl.halLife}}</p>
+          <p>{{CalcCtrl.hal10yCost}}</p>
         </div>
       </section>
       <section class="cfl">
         <div>
           <h4>CFL</h4>
-          <p>{{cflWattage}}</p>
-          <p>{{cflCost}}</p>
-          <p>{{cflLife}}</p>
-          <p>{{cfl10yCost}}</p>
+          <p>{{CalcCtrl.cflWattage}}</p>
+          <p>{{CalcCtrl.cflCost}}</p>
+          <p>{{CalcCtrl.cflLife}}</p>
+          <p>{{CalcCtrl.cfl10yCost}}</p>
         </div>
       </section>
       <section class="led">
         <div>
           <h4>LED</h4>
-          <p>{{ledWattage}}</p>
-          <p>{{ledCost}}</p>
-          <p>{{ledLife}}</p>
-          <p>{{led10yCost}}</p>
+          <p>{{CalcCtrl.ledWattage}}</p>
+          <p>{{CalcCtrl.ledCost}}</p>
+          <p>{{CalcCtrl.ledLife}}</p>
+          <p>{{CalcCtrl.led10yCost}}</p>
         </div>
       </section>
     </main>
@@ -57,19 +57,19 @@
       <div>
         <h4>Lumens</h4>
         <p>Brightness <br>of bulb</p>
-        <select ng-change="calculate()" ng-model="currentLumens"
-                ng-options="o for o in lumenOptions">
+        <select ng-change="CalcCtrl.calculate()" ng-model="CalcCtrl.currentLumens"
+                ng-options="o for o in CalcCtrl.lumenOptions">
         </select>
       </div>
       <div>
         <h4>kWh</h4>
         <p>Kilowatt-hour <br>cost</p>
-        <input type="number" ng-change="calculate()" ng-model="currentCost"> pence
+        <input type="number" ng-change="CalcCtrl.calculate()" ng-model="CalcCtrl.currentCost"> pence
       </div>
       <div>
         <h4>Hours</h4>
         <p>Usage <br>per day</p>
-        <input type="number" ng-change="calculate()" ng-model="currentHours">
+        <input type="number" ng-change="CalcCtrl.calculate()" ng-model="CalcCtrl.currentHours">
       </div>
     </form>
     <p><small>Fork this web app on
