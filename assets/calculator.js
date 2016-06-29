@@ -61,20 +61,29 @@
       vm.cflCost = (((vm.cflWattage * totalHours) / 1000) * cost).toFixed(2);
       vm.ledCost = (((vm.ledWattage * totalHours) / 1000) * cost).toFixed(2);
 
-      // Calculate the 10 year cost, with bulb replacement.
-      vm.inc10yCost = (10 * vm.incCost + incBulbCost *
-        Math.ceil(totalHours * 10 / vm.incLife)).toFixed(2);
-      vm.hal10yCost = (10 * vm.halCost + halBulbCost *
-        Math.ceil(totalHours * 10 / vm.halLife)).toFixed(2);
-      vm.cfl10yCost = (10 * vm.cflCost + cflBulbCost *
-        Math.ceil(totalHours * 10 / vm.cflLife)).toFixed(2);
-      vm.led10yCost = (10 * vm.ledCost + ledBulbCost *
-        Math.ceil(totalHours * 10 / vm.ledLife)).toFixed(2);
+      // Calculate the 10 year cost, with bulb replacement for each type of bulb
+      vm.inc10yCost = calculateTenYearCost(vm.incCost, incBulbCost, vm.incLife,
+        totalHours);
+      vm.hal10yCost = calculateTenYearCost(vm.halCost, halBulbCost, vm.halLife,
+        totalHours);
+      vm.cfl10yCost = calculateTenYearCost(vm.cflCost, cflBulbCost, vm.cflLife,
+        totalHours);
+      vm.led10yCost = calculateTenYearCost(vm.ledCost, ledBulbCost, vm.ledLife,
+        totalHours);
     };
 
     // Run the calculation the first time the page is loaded.
     vm.calculate();
 
   });
+
+
+  /**
+   * Calculate the total cost of a bulb including running and replacement costs.
+   */
+  function calculateTenYearCost(electricCost, bulbCost, bulbLife, numHours) {
+    return (10 * electricCost + bulbCost *
+      Math.ceil(numHours * 10 / bulbLife)).toFixed(2);
+  }
 
 })();
