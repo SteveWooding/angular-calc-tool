@@ -44,18 +44,18 @@
       vm.cflWattage = (vm.currentLumens * cflConversion).toFixed(1);
       vm.ledWattage = (vm.currentLumens * ledConversion).toFixed(1);
 
-      // Put a max limit of 24 hours and a min limit of 1 hour of bulb use
+      // Put a max limit of 24 hours and a min limit of 0 hours of bulb use
       // in a day.
       if (vm.currentHours > 24) {
         vm.currentHours = 24;
       }
-      else if (vm.currentHours < 1) {
-        vm.currentHours = 1;
+      else if (vm.currentHours < 0) {
+        vm.currentHours = 0;
       }
 
-      // Don't allow negative or free electric price
-      if (vm.currentCost < 1) {
-        vm.currentCost = 1;
+      // Don't allow negative electric price
+      if (vm.currentCost < 0) {
+        vm.currentCost = 0;
       }
 
       // Calculate the total number of hours of bulb use per year.
